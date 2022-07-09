@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Arial";
+    src: url("../../assets/fonts/ArialMT.eot");
+    src: local("Arial"),
+    url("../../assets/fonts/ArialMT.eot?iefix") format("embedded-opentype"),
+    url("../../assets/fonts/ArialMT.woff") format("woff"),
+    url("../../assets/fonts/ArialMT.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: url("../../assets/fonts/Arial-ItalicMT.eot");
+    src: local("Arial"),
+    url("../../assets/fonts/Arial-ItalicMT.eot?iefix") format("embedded-opentype"),
+    url("../../assets/fonts/Arial-ItalicMT.woff") format("woff"),
+    url("../../assets/fonts/Arial-ItalicMT.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Georgia";
+    src: url("../../assets/fonts/Georgia.eot");
+    src: local("Georgia"),
+    url("../../assets/fonts/Georgia.eot?iefix") format("embedded-opentype"),
+    url("../../assets/fonts/Georgia.woff") format("woff"),
+    url("../../assets/fonts/georgia.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.veil__darken {
+    background: rgba(41, 41, 41, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+    &:hover ~ #pets-container .pop-up__close {
+        background-color: #FDDCC4;
+        border: 2px solid #FDDCC4;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.body-hide {
+    overflow: hidden;
+    // padding-right: 17px;
+}
+
+h3 {
+    @include font ($size: 35px, $height: 130%, $spacing: 0.06em);
+    height: 90px;
+    @include media-mobile {
+        font-size: 25px;
+        height: 64px;
+    }
+}
+
+h4 {
+    @include font ($size: 20px, $height: 115%, $spacing: 0.06em);
+}
+
+.font-arial-info {
+    @include font ($family: "Arial", $size: 15px, $height: 160%);
+}

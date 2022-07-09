@@ -1,0 +1,253 @@
+#pets-container {
+    background-color: #F6F6F6;
+    width: 100%;
+}
+
+.pets {
+    padding: 80px 0 100px;
+    text-align: center;
+    @include media-mobile {
+        padding: 42px 0;
+    }
+}
+
+.pets-content {
+    position: relative;
+}
+
+.pets-content-heading {
+    text-align: center;;
+    color: #545454;
+    margin: 0;
+}
+
+.slider {
+    margin: 60px auto;
+    width: 990px;
+    overflow: hidden;
+    @include media-tablet {
+        width: 580px;
+    }
+    @include media-mobile {
+        width: 270px;
+        margin: 42px auto 114px;
+    }
+}
+
+.slider-arrow-left,
+.slider-arrow-right {
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+.slider-arrow-left {
+    background-image: url(../../assets/icons/ArrowLeft.svg);
+    top: calc(50% - 26px);
+    left: 0;
+    @include media-mobile {
+        top: calc(100% - 146px);
+        left: 58px;
+    }
+}
+
+.slider-arrow-right {
+    background-image: url(../../assets/icons/ArrowRight.svg);
+    top: calc(50% - 26px);
+    left: calc(100% - 52px);
+    @include media-mobile {
+        top: calc(100% - 146px);
+        left: calc(100% - 110px);
+    }
+}
+
+.slider-arrow-left:hover,
+.slider-arrow-right:hover {
+    border: 2px solid #FDDCC4;
+    background-color: #FDDCC4;
+}
+
+/* .slider-arrow-left:active,
+.slider-arrow-right:active {
+    border: 2px solid #F1CDB3;
+    background-color: #F1CDB3;
+} */
+
+.slider-arrow-left-inactive {
+    background-image: url(../../assets/icons/ArrowLeftInactive.svg);
+    border: 2px solid #CDCDCD;
+}
+
+.slider-arrow-right-inactive {
+    background-image: url(../../assets/icons/ArrowRightInactive.svg);
+    border: 2px solid #CDCDCD;
+}
+
+.left-arrow__transform {
+    animation: moveContainerLeft1280 1.5s linear;
+    @include media-tablet {
+        animation: moveContainerLeft768 1.5s linear;
+    }
+    @include media-mobile {
+        animation: moveContainerLeft320 1s linear;
+    }
+}
+
+@keyframes moveContainerLeft1280 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(1080px);
+    }
+}
+
+@keyframes moveContainerLeft768 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(620px);
+    }
+}
+
+@keyframes moveContainerLeft320 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(290px);
+    }
+}
+
+.right-arrow__transform {
+    animation: moveContainerRight1280 1.5s linear;
+    @include media-tablet {
+        animation: moveContainerRight768 1.5s linear;
+    }
+    @include media-mobile {
+        animation: moveContainerRight320 1s linear;
+    }
+}
+
+@keyframes moveContainerRight1280 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-1080px);
+    }
+}
+
+@keyframes moveContainerRight768 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-620px);
+    }
+}
+
+@keyframes moveContainerRight320 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-290px);
+    }
+}
+
+.cards-container {
+    display: flex;
+    position: relative;
+    left: -1080px;
+    gap: 90px;
+    height: 435px;
+    @include media-tablet {
+        left: -620px;
+        gap: 40px;
+    }
+    @include media-mobile {
+        left: -290px;
+        gap: 20px;
+    }
+}
+
+.cards-container-left,
+.cards-container-center,
+.cards-container-right {
+    display: flex;
+    gap: 90px;
+    @include media-tablet {
+        gap: 40px;
+        & > :nth-child(3) {
+            display: none;
+        }
+    }
+    @include media-mobile {
+        & > :nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+.card {
+    &:hover {
+        background-color: #FFFFFF;
+    }
+    
+    &:hover .btn-pets {
+        border: 2px solid #FDDCC4;
+        background-color: #FDDCC4;
+    }
+    @include media-tablet {
+        width: 270px;
+        height: 435px;
+    }
+    @include media-mobile {
+        order: -1;
+        grid-column: 1 / span 2;
+    }
+}
+
+.pets-img {
+    object-fit: contain;
+}
+
+.card-name {
+    color: #545454;
+    margin: 30px auto;
+    @include font ($size: 20px, $height: 23px, $spacing: 0.06em);
+}
+
+.pets-content-button {
+    border: 2px solid #F1CDB3;
+    background: #F1CDB3;
+    margin-bottom: 0;
+    @include media-tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 260px;
+        height: 52px;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+.pets-content-button:hover {
+    border: 2px solid #FDDCC4;
+    background: #FDDCC4;
+}

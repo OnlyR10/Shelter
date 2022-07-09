@@ -1,0 +1,10 @@
+.wrapper {
+    width: $content-desktop-width;
+    margin: 0 auto;
+    @include media-tablet {
+        width: $content-tablet-width;
+    }
+    @include media-mobile {
+        width: $content-mobile-width;
+    }
+}

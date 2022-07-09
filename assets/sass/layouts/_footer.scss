@@ -1,0 +1,145 @@
+/* ---------------------------------- FOOTER ---------------------------------- */
+#footer-container {
+    background: url(../../assets/images/Background/noise_transparent.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) , #211F20;
+    background-repeat: repeat;
+    width: 100%;
+}
+
+.footer {
+    padding-top: 40px;
+    @include media-tablet {
+        padding-top: 30px;
+    }
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    grid-column-gap: 160px;
+    @include media-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 65px 60px;
+    }
+    @include media-mobile {
+        gap: 40px;
+    }
+}
+
+.contacts,
+.locations {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    @include media-tablet {
+        margin-top: 0;
+    }
+    @include media-mobile {
+        text-align: center;
+    }
+}
+
+.contacts {
+    @include media-mobile {
+        width: 251.24px;
+    }
+}
+
+.locations {
+    @include media-mobile {
+        width: 294.21px;
+    }
+}
+
+.contacts-container-header {
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.line-break-768 {
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.line-break-320 {
+    display: none;
+    @include media-mobile {
+        display: inline;
+    }
+}
+
+.contacts-email-container {
+    margin: 40px 0;
+}
+
+.contacts-components-container,
+.locations-components-container {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+}
+
+.contacts-components-container {
+    margin-top: 40px;
+    @include media-mobile {
+        justify-content: center;
+    }
+}
+
+
+.locations-components-container {
+    margin-top: 33px;
+    @include media-mobile {
+        text-align: start;
+        margin-top: 40px;
+    }
+}
+
+.contacts-info,
+.location-info {
+    color: #F1CDB3;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    @include font ($size: 20px, $height: 115%, $spacing: 0.06em);
+}
+
+.icon-email,
+.icon-phone {
+    width: 40px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.icon-email {
+    background-image: url(../../assets/icons/icon-email.svg);
+}
+
+.icon-phone {
+    background-image: url(../../assets/icons/icon-phone.svg);
+}
+
+.icon-marker {
+    width: 22px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    background-image: url(../../assets/icons/icon-marker.svg);
+}
+
+.footer-puppy {
+    object-fit: contain;
+    align-self: center;
+    @include media-mobile {
+        width: 260px;
+        height: 269px;
+    }
+}
+/* ---------------------------------- FOOTER ---------------------------------- */

@@ -1,0 +1,119 @@
+#donation-container {
+    background-color: #F6F6F6;
+    width: 100%;
+}
+
+.donation {
+    padding: 80px 0 100px;
+    @include media-mobile {
+        padding: 42px 0;
+    }
+}
+
+.donation-content {
+    display: grid;
+    grid-template-columns: max-content 380px;
+    grid-column-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    @include media-tablet {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 60px;
+    }
+    @include media-mobile {
+        gap: 42px;
+    }
+}
+
+.donation-dog {
+    object-fit: contain;
+    @include media-mobile {
+        width: 260px;
+        height: 135.2px;
+    }
+}
+
+.donation-content-container {
+    @include media-tablet {
+        width: 380px;
+    }
+    @include media-mobile {
+        width: 100%;
+    }
+}
+
+.donation-content-container-header3 {
+    color: #545454;
+    margin: 0 0 20px;
+    @include media-mobile {
+        text-align: center;
+    }
+}
+
+.donation-content-container-header5 {
+    color: #545454;
+    margin: 0 0 20px;
+    @include font ($size: 15px, $height: 110%, $spacing: 0.06em);
+    @include media-mobile {
+        text-align: center;
+        line-height: 160%;
+        letter-spacing: normal;
+    }
+}
+
+.credit-card-container {
+    display: inline-block;
+    margin: 0 0 20px;
+    padding: 10px 15px;
+    background: #F1CDB3;
+    border-radius: 9px;
+    @include media-tablet {
+        width: 349px;
+        height: 43px;
+        padding: 0;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    @include media-mobile {
+        width: 281px;
+        height: 43px;
+        margin: 0 auto 20px;
+    }
+}
+
+.credit-card-container:hover {
+    background: #FDDCC4;
+    cursor: pointer;
+}
+
+.credit-card {
+    object-fit: contain;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.credit-card-number {
+    display: inline-block;
+    color: #545454;
+    margin: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    @include font ($size: 20px, $height: 115%, $spacing: 0.06em);
+    @include media-mobile {
+        font-size: 15px;
+        line-height: 110%;
+    }
+
+}
+
+.donation-content-container-info {
+    color: #B2B2B2;
+    margin: 0;
+    @include font ($family: "Arial", $style: italic, $size: 12px, $height: 18px);
+    @include media-mobile {
+        text-align: justify;
+        padding: 0 10px;
+    }
+}

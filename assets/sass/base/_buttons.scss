@@ -1,0 +1,10 @@
+.btn-card {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 45px;
+    border-radius: 100px;
+    color: #292929;
+    @include font ($size: 17px, $height: 130%, $spacing: 0.06em);
+    border: 2px solid #F1CDB3;
+    margin-bottom: 30px;
+}

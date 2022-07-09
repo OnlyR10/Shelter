@@ -1,0 +1,286 @@
+.our-pets {
+    .header-container {
+        padding: 30px 0;
+        background-color: white;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .fixed {
+        position: fixed;
+    }
+  
+    .header {
+        margin-bottom: 0;
+    }
+    
+    .header-color {
+        background-color: #FFFFFF;
+    }
+
+    .logo-title {
+        color: #545454;
+    }
+    
+    .logo-subtitle {
+        color: #292929;
+    }
+    
+    .nav-menu-components {
+        color: #545454;
+        &:hover {
+            color: #292929;
+        }
+        &:active {
+            color: #545454;
+        }
+    }
+      
+    .burger-menu__line {
+        border-color: #000000;
+    }
+    
+    #pets-container {
+        background-color: #F6F6F6;
+        padding: 120px 0 0;
+        width: 100%;
+    }
+    
+    .pets-content {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        justify-content: space-around;
+        grid-row-gap: 45px;
+        padding: 80px 0 100px;
+        @include media-tablet {
+            padding: 60px 0 76px;
+            grid-row-gap: 30px;
+        }
+        @include media-mobile {
+            padding: 42px 0;
+            grid-row-gap: 42px;
+        }
+    }
+    
+    .pets-content-header {
+        color: #545454;
+        margin: 0;
+        text-align: center;
+        @include media-tablet {
+            margin-top: 20px;
+        }
+        @include media-mobile {
+            margin-top: 0;
+        }
+    }
+
+    .pagination {
+        width: 1200px;
+        overflow: hidden;
+        @include media-tablet {
+            width: 580px;
+        }
+        @include media-mobile {
+            width: 270px;
+        }
+    }
+    
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1200px);
+        left: -1240px;
+        gap: 40px;
+        height: auto;
+        & > div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 40px;
+        }
+        @include media-tablet {
+            grid-template-columns: repeat(3, 580px);
+            left: -620px;
+            & > div {
+                display: grid;
+                grid-template-columns: repeat(2, 270px);
+                gap: 30px 40px;
+            }
+        }
+        @include media-mobile {
+            grid-template-columns: repeat(3, 270px);
+            left: -290px;
+            gap: 20px;
+            & > div {
+                display: grid;
+                grid-template-columns: repeat(1, 270px);
+                gap: 30px 0;
+            }
+        }
+    }
+
+    .scroll-left__transform {
+        animation: scrollLeft1280 1.5s linear;
+        @include media-tablet {
+            animation: scrollLeft768 1.5s linear;
+        }
+        @include media-mobile {
+            animation: scrollLeft320 1s linear;
+        }
+    }
+    
+    @keyframes scrollLeft1280 {
+        0% {
+            transform: translate(0);
+        }
+    
+        100% {
+            transform: translate(1240px);
+        }
+    }
+    
+    @keyframes scrollLeft768 {
+        0% {
+            transform: translate(0);
+        }
+    
+        100% {
+            transform: translate(620px);
+        }
+    }
+    
+    @keyframes scrollLeft320 {
+        0% {
+            transform: translate(0);
+        }
+    
+        100% {
+            transform: translate(290px);
+        }
+    }
+
+    .scroll-right__transform {
+        animation: scrollRight1280 1.5s linear;
+        @include media-tablet {
+            animation: scrollRight768 1.5s linear;
+        }
+        @include media-mobile {
+            animation: scrollRight320 1s linear;
+        }
+    }
+    
+    @keyframes scrollRight1280 {
+        0% {
+            transform: translate(0);
+        }
+    
+        100% {
+            transform: translate(-1240px);
+        }
+    }
+    
+    @keyframes scrollRight768 {
+        0% {
+            transform: translate(0);
+        }
+    
+        100% {
+            transform: translate(-620px);
+        }
+    }
+    
+    @keyframes scrollRight320 {
+        0% {
+            transform: translate(0);
+        }
+    
+        100% {
+            transform: translate(-290px);
+        }
+    }
+    
+    .card {
+        margin: 15px 0;
+        @include media-tablet {
+            margin: 0;
+        }
+        &:hover {
+            background-color: #FFFFFF;
+        }
+        
+        &:hover .btn-card {
+            background-color: #FDDCC4;
+            border: 2px solid #FDDCC4;
+        }
+    }
+    
+    .pets-img {
+        object-fit: contain;
+    }
+    
+    .card-info {
+        color: #545454;
+        margin: 30px auto;
+        @include font ($size: 20px, $height: 23px, $spacing: 0.06em);
+    }
+      
+    .navigation {
+        display: grid;
+        grid-template-columns: repeat(5, 52px);
+        grid-template-rows: 52px;
+        grid-column-gap: 20px;
+        justify-content: center;
+        @include media-tablet {
+            margin-top: 10px;
+        }
+        @include media-mobile {
+            grid-column-gap: 10px;
+            margin-top: 0;
+        }
+    }
+    
+    .navigation-arrows,
+    .navigation-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        border-radius: 100px;
+        text-decoration: none;
+        @include font ($size: 20px, $height: 115%, $spacing: 0.06em);
+    }
+    
+    .navigation-arrows-normal,
+    .navigation-number-normal {
+        border: 2px solid #F1CDB3;
+        color: #292929;
+    }
+    
+    .navigation-arrows-normal:hover,
+    .navigation-number-normal:hover {
+        background-color: #FDDCC4;
+        border: 2px solid #FDDCC4;
+    }
+    
+    /* .navigation-arrows-normal:active,
+    .navigation-number-normal:active {
+        background-color: #F1CDB3;
+        border: 2px solid #F1CDB3;
+    } */
+    
+    .navigation-number-active {
+        background-color: #F1CDB3;
+        color: #292929;
+        cursor: default;
+    }
+    
+    .navigation-arrows-inactive,
+    .navigation-number-inactive {
+        border: 2px solid #CDCDCD;
+        color: #CDCDCD;
+        cursor: default;
+    }
+    
+    /* .navigation-arrows-inactive:hover,
+    .navigation-number-inactive:hover {
+        cursor:  url(../../assets/icons/icon-cross-grey.svg), pointer;
+    } */
+}

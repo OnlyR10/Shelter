@@ -1,0 +1,112 @@
+.pop-up {
+    width: 80%;
+    min-width: 240px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    @media (max-width: 320px) {
+        width: auto;
+    }
+}
+
+.pop-up_active {
+    display: grid;
+}
+
+.pop-up__close {
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    background: url(../../assets/icons/vector.svg) no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -52px;
+    left: calc(100% - 10px);
+    cursor: pointer;
+    @include media-mobile {
+        left: calc(100% - 22px);
+    }
+    &:hover {
+        background-color: #FDDCC4;
+        border: 2px solid #FDDCC4;
+    }
+}
+
+.pop-up__modal-window {
+    display: flex;
+    background: #FAFAFA;
+    border-radius: 9px;
+    user-select: none;
+}
+
+.modal-window__pets-img {
+    object-fit: contain;
+    width: 150%;
+    @include media-mobile {
+        display: block;
+    }
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.modal-window__content {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    padding: 25px;
+    text-align: start;
+}
+
+.content_title {
+    height: auto;
+    margin: 0 0 10px;
+    color: #000000;
+    @include media-mobile {
+        text-align: center;
+    }
+}
+
+.content_subtitle {
+    margin: 0;
+    color: #000000;
+    @include media-mobile {
+        text-align: center;
+    }
+}
+
+.content_text {
+    @include font ($size: 15px, $height: 110%, $spacing: 0.06em);
+    color: #000000;
+    margin: 40px 0;
+    @include media-tablet {
+        font-size: 13px;
+    }
+    @include media-mobile {
+        text-align: justify;
+    }
+}
+
+.content_lists {
+    @include font ($size: 15px, $height: 110%, $spacing: 0.06em);
+    color: #000000;
+    margin: 0;
+    padding-left: 0
+}
+
+.content_lists > li {
+    list-style-image: url(../../assets/icons/dot.svg);
+    margin-bottom: 10px;
+}
+
+.content_lists > li:last-child {
+    margin-bottom: 0;
+}
