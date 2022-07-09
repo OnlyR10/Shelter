@@ -1,1 +1,1 @@
-Link to the project: https://onlyr10.github.io/Shelter/
+Link to the project: https://onlyr10.github.io/Shelter/pages/main/
